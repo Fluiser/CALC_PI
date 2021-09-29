@@ -32,7 +32,8 @@ int main()
 	for(int threadId = 0; threadId < THREADS_SIZE; ++threadId)
 	{
 		threads[threadId] = std::thread([&](int thid) -> int {
-				for(float256 x = thid; x < n; x += THREADS_SIZE)
+				size_t index = thid;
+				for(float256 x = thid; x < n; x += THREADS_SIZE, index += THREADS_SIZE)
 				{
 					float256 y = pow(-1, x);
 					y /= pow(2, 10*x);
@@ -51,8 +52,9 @@ int main()
 							+
 							( 1.0f/(10.0f*x+9.0f) )
 						);
-					std::lock_guard<std::mutex> __(mtx);
-					PI_buffer.emplace_back(y);
+					//std::lock_guard<std::mutex> __(mtx);
+					//PI_buffer.emplace_back(y);
+					PI_buffer[index] = y;
 				}
 				return 0;
 		}, threadId);

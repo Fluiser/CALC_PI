@@ -24,7 +24,7 @@ int main()
 	std::vector<float256> PI_buffer{};
 	PI_buffer.reserve(n);
 	for(size_t i = 0; i < n; ++i)
-		PI_buffer[i] = 0; // Fill vector. Because it's drops range error, if element from index not initialized.
+		PI_buffer.emplace_back(0); // Fill vector. Because it's drops range error, if element from index not initialized.
 	
 	std::mutex mtx;
 

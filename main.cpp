@@ -12,7 +12,8 @@
 #define THREADS_SIZE 4
 #endif
 
-using float256 = boost::multiprecision::number<boost::multiprecision::cpp_dec_float<MAX_INDEX>>;
+typedef boost::multiprecision::number<boost::multiprecision::cpp_dec_float<MAX_INDEX, int, std::allocator<boost::multiprecision::cpp_dec_float<MAX_INDEX>>>> float256;
+
 
 int main()
 {

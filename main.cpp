@@ -26,7 +26,7 @@ int main()
 	for(size_t i = 0; i < n; ++i)
 		PI_buffer.emplace_back(0); // Fill vector. Because it's drops range error, if element from index not initialized.
 	
-	std::mutex mtx;
+//	std::mutex mtx;
 
 	std::thread threads[THREADS_SIZE];
 

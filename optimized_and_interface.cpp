@@ -14,6 +14,14 @@
 
 #define NUMBER 409600
 
+#if ((NUMBER > 16000) || MAX_INDEX > 600)
+
+#warning "------------------- ALARM!!! ------------------------"
+#warning "Defined values NUMBER and MAX_INDEX IS VERY DOHUYA"
+#warning "-----------------------------------------------------"
+
+#endif
+
 typedef boost::multiprecision::number<boost::multiprecision::cpp_dec_float<MAX_INDEX, int, std::allocator<boost::multiprecision::cpp_dec_float<MAX_INDEX>>>> float256;
 
 struct iter_info {

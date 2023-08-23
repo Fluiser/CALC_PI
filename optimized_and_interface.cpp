@@ -16,9 +16,7 @@
 
 #if ((NUMBER > 16000) || MAX_INDEX > 600)
 
-#warning "------------------- ALARM!!! ------------------------"
-#warning "Defined values NUMBER and MAX_INDEX IS VERY DOHUYA"
-#warning "-----------------------------------------------------"
+#warning "------------------- ALARM!!! ------------------------\nDefined values NUMBER and MAX_INDEX IS VERY DOHUYA\n-----------------------------------------------------"
 
 #endif
 

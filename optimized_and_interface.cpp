@@ -6,17 +6,17 @@
 #include <mutex>
 
 #ifndef MAX_INDEX
-#define MAX_INDEX (1024*200)
+#define MAX_INDEX (500)
 #endif
 #ifndef THREADS_SIZE
 #define THREADS_SIZE 8
 #endif
 
-#define NUMBER 409600
+#define NUMBER 1600
 
 #if ((NUMBER > 16000) || MAX_INDEX > 600)
 
-#warning "------------------- ALARM!!! ------------------------\nDefined values NUMBER and MAX_INDEX IS VERY DOHUYA\n-----------------------------------------------------"
+#warning "*****----> Defined values NUMBER and MAX_INDEX IS VERY DOHUYA"
 
 #endif
 

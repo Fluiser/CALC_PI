@@ -35,8 +35,8 @@ int main()
 
 	std::vector<float256> PI_buffer{};
 	std::vector<iter_info> iter_info{};
-	PI_buffer.reserve(n);
-	iter_info.reserve(n);
+	PI_buffer.reserve(THREADS_SIZE);
+	iter_info.reserve(THREADS_SIZE);
 	for(size_t i = 0; i < THREADS_SIZE; ++i){
 		PI_buffer.emplace_back(0); // Fill vector. Because it's drops range error, if element from index not initialized.
 		iter_info.emplace_back();

@@ -18,7 +18,7 @@ int main()
 	long long int n = 0;
 	std::cout << "number: ";
 	std::cin >> n;
-	mpf_set_default_prec((float)n * 1.5f - (n/1000));
+	mpf_set_default_prec((float)n * 1.5f - (n/989));
 
 
 	std::vector<mpf_class> PI_buffer{};
